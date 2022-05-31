@@ -17,7 +17,7 @@ body {
 .card {
   background-color: #fff;
   width: 350px;
-  height: 450px;
+  height: 190px;
   position: relative;
   border-radius: 20px;
   box-shadow: 0 35px 80px rgba(255, 255, 255, 0.15);
@@ -29,6 +29,9 @@ body {
 .card:hover .img-box {
   width: 250px;
   height: 250px;
+}
+.card:hover .content .details {
+  transform: translateY(0px);
 }
 .card .img-box {
   background-color: #000;
@@ -58,12 +61,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  overflow: hidden;
 }
 .card .content .details {
   padding: 40px;
   text-align: center;
   width: 100%;
   transition: 0.5s;
+  transform: translateY(150px);
 }
 .card .content .details h2 {
   font-size: 1.25em;
@@ -91,6 +96,27 @@ body {
   font-size: 0.85em;
   font-weight: 400;
   opacity: 0.5;
+}
+.card .content .details .action-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.card .content .details .action-btn button {
+  padding: 10px 30px;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #ff5f95;
+  color: #fff;
+  border: 1px solid #ff5f95;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.card .content .details .action-btn button:hover {
+  border: 1px solid #999;
+  color: #999;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

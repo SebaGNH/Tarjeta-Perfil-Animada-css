@@ -17,8 +17,8 @@ body
 .card
     background-color: #fff
     width: 350px
-    //height: 190px
-    height: 450px //Tamaño del hover
+    height: 190px
+    //height: 450px //Tamaño del hover
     position: relative //no pierde su ubicación y puede moverse a otro lugar
     border-radius: 20px
     box-shadow: 0 35px 80px rgba(#fff,.15)
@@ -28,6 +28,9 @@ body
         .img-box
             width: 250px
             height: 250px
+        .content
+            .details
+                transform: translateY(0px) //Mostramos botones y followers
     .img-box
         background-color: #000
         width: 150px
@@ -55,11 +58,15 @@ body
         display: flex
         justify-content: center
         align-items: flex-end
+        
+        overflow: hidden //Ocultamos los botones y followers que movimos con el   transform: translateY(150px
         .details
             padding: 40px
             text-align: center
             width: 100%
             transition: 0.5s
+
+            transform: translateY(150px) //Ocultamos los botones y followers
             h2
                 font-size: 1.25em
                 font-weight: 600
@@ -84,7 +91,27 @@ body
                         font-weight: 400
                         opacity: 0.5
             .action-btn
-                
+                display: flex
+                justify-content: space-between
+                //gap: 20px
+                button
+                    padding: 10px 30px
+                    font-size: 1em
+                    font-weight: 500
+                    background-color: #ff5f95
+                    color: #fff
+                    //border: none
+                    border: 1px solid #ff5f95
+                    border-radius: 5px
+                    outline: none
+                    cursor: pointer
+                    transition: .5s
+                    &:hover //&:nth-child(2)
+                        border: 1px solid #999
+                        color: #999
+                        background-color: #fff
+                        
+                    
 
 
 
