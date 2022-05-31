@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap')
 *
     margin: 0px
     padding: 0px
@@ -7,6 +8,7 @@ body
     background-color: #292929
     //background: linear-gradient(45deg, #fbda61, #ff5acd)
     //background: linear-gradient(45deg, red, blue)
+    font-family: 'Poppins', sans-serif
     display: flex
     justify-content: center
     align-items: center
@@ -15,13 +17,17 @@ body
 .card
     background-color: #fff
     width: 350px
-    height: 190px
+    //height: 190px
+    height: 450px //Tamaño del hover
     position: relative //no pierde su ubicación y puede moverse a otro lugar
     border-radius: 20px
     box-shadow: 0 35px 80px rgba(#fff,.15)
     transition: 0.5s
     &:hover
-        height: 450px
+        height: 450px        
+        .img-box
+            width: 250px
+            height: 250px
     .img-box
         background-color: #000
         width: 150px
@@ -32,3 +38,53 @@ body
         transform: translateX(-50%)
         border-radius: 20px
         box-shadow: 0 15px 50px rgba(#000, .35)
+        overflow: hidden //ocultamos el sobrante de la imagen para que aplique el border-radius
+        transition: 0.5s //Para el hover de la imagen
+        img
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            object-fit: cover //Se dimensiona al tamaño del contenedor
+            &:hover
+    .content
+        position: absolute
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        .details
+            padding: 40px
+            text-align: center
+            width: 100%
+            transition: 0.5s
+            h2
+                font-size: 1.25em
+                font-weight: 600
+                color: #555
+                line-height: 1.2em
+                span
+                    font-size: 0.75em
+                    font-weight: 500
+                    opacity: 0.5
+            .data
+                display: flex
+                justify-content: space-between
+                margin: 20px 0
+                h3
+                    //font-size: 0.8em
+                    font-size: 1em
+                    color: #555
+                    line-height: 1.2em
+                    font-weight: 600
+                    span
+                        font-size: .85em
+                        font-weight: 400
+                        opacity: 0.5
+            .action-btn
+                
+
+
+
