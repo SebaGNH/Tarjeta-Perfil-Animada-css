@@ -5,4 +5,4 @@
 
 
 
-![Muestra](./img/muestra-pinion-fijo.png "Muestra de la web")
+![Muestra](./img/GIF-muestra-pinion-fijo.gif "Muestra de la web")
